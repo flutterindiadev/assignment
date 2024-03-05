@@ -10,11 +10,11 @@ class AddfavoriteBloc extends Bloc<AddfavoriteEvent, AddfavoriteState> {
 
     on<AddThisToFavorite>((event, emit) {
       if (event.isFavorite == true) {
-        emit(AddedFavoriteState());
+        emit(AddedFavoriteState(event.index));
       }
 
       if (event.isFavorite == false) {
-        emit(NotFavoriteState());
+        emit(NotFavoriteState(event.index));
       }
     });
   }

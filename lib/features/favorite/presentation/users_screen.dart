@@ -19,7 +19,7 @@ class UserScreen extends StatelessWidget {
                 subtitle: Text(state.users[index].completed.toString()),
                 trailing: BlocBuilder<AddfavoriteBloc, AddfavoriteState>(
                   builder: (context, state) {
-                    if (state is AddedFavoriteState) {
+                    if (state is AddedFavoriteState && state.index == index) {
                       return InkWell(
                         onTap: () {
                           BlocProvider.of<AddfavoriteBloc>(context)
@@ -32,7 +32,7 @@ class UserScreen extends StatelessWidget {
                       );
                     }
 
-                    if (state is NotFavoriteState) {
+                    if (state is AddedFavoriteState && state.index == index) {
                       return InkWell(
                         onTap: () {
                           BlocProvider.of<AddfavoriteBloc>(context)
