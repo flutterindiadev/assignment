@@ -56,20 +56,6 @@ class UserScreen extends StatelessWidget {
                     );
                   },
                 ),
-                // trailing: InkWell(
-                //   onTap: () {
-                //     // BlocProvider.of<FavoriteBloc>(context).add();
-                //   },
-                //   //   child: state.users[index].isFavorite!
-                //   //       ? const Icon(
-                //   //           Icons.favorite,
-                //   //           color: Colors.red,
-                //   //         )
-                //   //       : Icon(
-                //   //           Icons.favorite,
-                //   //           color: Colors.grey,
-                //   //         ),
-                // ),
               );
             },
           );
